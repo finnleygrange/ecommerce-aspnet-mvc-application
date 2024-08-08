@@ -1,3 +1,5 @@
+using ECommerceProject.Data;
+
 namespace ECommerceProject
 {
     public class Program
@@ -8,6 +10,8 @@ namespace ECommerceProject
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<AppDbContext>();
 
             var app = builder.Build();
 
